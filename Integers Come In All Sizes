@@ -1,0 +1,8 @@
+# Read four integers from separate lines
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+# Calculate and print the result
+print(pow(a, b) + pow(c, d))
