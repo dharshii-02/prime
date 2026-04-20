@@ -1,0 +1,15 @@
+import re
+
+S = input()
+k = input()
+
+# Use a lookahead (?=...) to find overlapping occurrences
+pattern = re.compile(f'(?={k})')
+matches = list(pattern.finditer(S))
+
+if matches:
+    for m in matches:
+        # The end index in the output is start + len(k) - 1
+        print(f"({m.start()}, {m.start() + len(k) - 1})")
+else:
+    print("(-1, -1)")
